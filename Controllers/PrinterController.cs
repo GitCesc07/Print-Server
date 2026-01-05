@@ -69,8 +69,7 @@ namespace PrintServer.Controllers
                 //Configutrtación de la impresora.
                 pdfDocument.PrintSettings.PrinterName = printerName;
                 pdfDocument.PrintSettings.SelectPageRange(1, pdfDocument.Pages.Count);
-                //pdfDocument.PrintSettings.SelectSinglePageLayout(Spire.Pdf.Print.PdfSinglePageScalingMode.FitSize);
-                pdfDocument.PrintSettings.PaperSize = PdfPaperSize.Statement;
+                pdfDocument.PrintSettings.SelectSinglePageLayout(Spire.Pdf.Print.PdfSinglePageScalingMode.FitSize);
                 pdfDocument.PrintSettings.DocumentName = "Ticket Print";
 
                 // Realizar impresión.
